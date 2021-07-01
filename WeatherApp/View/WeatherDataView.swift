@@ -11,7 +11,7 @@ struct WeatherDataView: View {
     
     var body: some View {
 
-        VStack(spacing: 8){
+        VStack(spacing: 20){
             
             CustomStackView {
                 
@@ -36,6 +36,65 @@ struct WeatherDataView: View {
                 }
                 .foregroundStyle(.white)
             }
+            
+            HStack{
+                
+                CustomStackView {
+                    
+                    Label {
+                        
+                        Text("UV Index")
+                        
+                    } icon: {
+                        
+                        Image(systemName: "sun.min")
+                    }
+
+                } contentView: {
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Text("0")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
+                        Text("Low")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                }
+                
+                CustomStackView {
+                    
+                    Label {
+                        
+                        Text("Rainfall")
+                        
+                    } icon: {
+                        
+                        Image(systemName: "drop.fill")
+                    }
+
+                } contentView: {
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Text("0 mm")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        
+                        Text("in last 24 hours")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                }
+            }
+            
+            .frame(maxHeight: .infinity)
         }
     }
 }

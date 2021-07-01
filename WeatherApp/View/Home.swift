@@ -70,7 +70,7 @@ struct Home: View {
                     .offset(y: getTitleOffset())
                     
                     //Custom Data View...
-                    VStack(spacing: 25){
+                    VStack(spacing: 20){
                         
                         //Customer Stack...
 
