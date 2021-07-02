@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06095F9D268E90050063DB63 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06095F9C268E90050063DB63 /* Forecast.swift */; };
 		0611F90B268B7B9F0071B940 /* WeatherDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0611F90A268B7B9E0071B940 /* WeatherDataView.swift */; };
 		06146FAB267B86EC006D73C9 /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06146FAA267B86EC006D73C9 /* WeatherAppApp.swift */; };
 		06146FAD267B86EC006D73C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06146FAC267B86EC006D73C9 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06095F9C268E90050063DB63 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		0611F90A268B7B9E0071B940 /* WeatherDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataView.swift; sourceTree = "<group>"; };
 		06146FA7267B86EC006D73C9 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06146FAA267B86EC006D73C9 /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		06146FF1267C179A006D73C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06095F9C268E90050063DB63 /* Forecast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				06146FAD267B86EC006D73C9 /* ContentView.swift in Sources */,
 				0611F90B268B7B9F0071B940 /* WeatherDataView.swift in Sources */,
+				06095F9D268E90050063DB63 /* Forecast.swift in Sources */,
 				069218BA267FA63900E99130 /* CustomCorner.swift in Sources */,
 				069218B8267F9E0300E99130 /* CustomStackView.swift in Sources */,
 				06440115267CECD9006D01DA /* Home.swift in Sources */,

@@ -93,8 +93,34 @@ struct WeatherDataView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 }
             }
-            
             .frame(maxHeight: .infinity)
+            
+            CustomStackView {
+                
+                Label {
+                    
+                    Text("Rainfall")
+                    
+                } icon: {
+                    
+                    Image(systemName: "drop.fill")
+                }
+
+            } contentView: {
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    
+                    Text("0 mm")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    
+                    Text("in last 24 hours")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                }
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            }
         }
     }
 }
