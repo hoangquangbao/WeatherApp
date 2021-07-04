@@ -95,31 +95,72 @@ struct WeatherDataView: View {
             }
             .frame(maxHeight: .infinity)
             
+            
             CustomStackView {
-                
+
+//                Label {
+//
+//                    Text("Rainfall")
+//
+//                } icon: {
+//
+//                    Image(systemName: "drop.fill")
+//                }
                 Label {
                     
-                    Text("Rainfall")
+                    Text("10-Day Forecast")
                     
                 } icon: {
                     
-                    Image(systemName: "drop.fill")
+                    Image(systemName: "calendar")
                 }
 
+
             } contentView: {
-                
+
                 VStack(alignment: .leading, spacing: 10) {
                     
-                    Text("0 mm")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    
-                    Text("in last 24 hours")
-                        .font(.title3)
-                        .fontWeight(.semibold)
+                    ForEach(forecast){ cast in
+                        
+                        VStack {
+                            HStack(spacing: 30){
+                                
+                                Text(cast.day)
+                                    .font(.title3.bold())
+                                    .frame(width: 60)
+                                
+                                Image(systemName: cast.image)
+                                    .symbolVariant(.fill)
+                                    .foregroundStyle(.yellow,.white)
+                                    .frame(width: 10, alignment: .leading)
+                                
+                                Text("\(Int(cast.farenheit - 3)) - \(Int(cast.farenheit))˚C")
+                                    .font(.title3.bold())
+                                
+                                //Progress Bar....
+                                ZStack(alignment: .leading) {
+                                    
+                                    Capsule()
+                                        .fill(.tertiary)
+                                        .foregroundStyle(.white)
+                                    
+                                    // for width...
+                                    GeometryReader{proxy in
+                                        
+                                        Capsule()
+                                            .fill(.linearGradient(.init(colors: [.green,.orange, .red]),startPoint: .leading, endPoint: .bottomTrailing))
+                                            .frame(width: (cast.farenheit / 100) * proxy.size.width)
+                                        
+                                    }
+                                }
+                                .frame(height: 4)
+                            }
+                            
+                            Divider()
+                        }
+                        .padding(.vertical,8)
+                    }
                 }
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             }
         }
     }

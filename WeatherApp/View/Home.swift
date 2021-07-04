@@ -40,13 +40,18 @@ struct Home: View {
                     //Weather Data...
                     VStack(alignment: .center, spacing: 5) {
                         
+//                        Image(systemName: "sun.min")
+//                            .symbolVariant(.fill)
+//                            .foregroundStyle(.yellow, .white)
+//                            // max Frame...
+//                            .frame(width: 90 ,height: 90)
+                        
                         Text("Thua Thien Hue")
                             .font(.system(size: 35))
                             .foregroundColor(.white)
                             .shadow(radius: 5)
                         
-//                        Text("33˚C")
-                        Text(" 32˚")
+                        Text(" 32˚C")
                             .font(.system(size: 45))
                             .foregroundColor(.white)
                             .shadow(radius: 5)
@@ -115,7 +120,7 @@ struct Home: View {
                     }
                     
                 }
-                .padding(.top,25)
+                .padding(.top,45)
                 .padding()
                 // getting Offset...
                 .overlay(
