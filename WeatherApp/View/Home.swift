@@ -40,22 +40,22 @@ struct Home: View {
                     //Weather Data...
                     VStack(alignment: .center, spacing: 5) {
                         
-//                        Image(systemName: "sun.min")
-//                            .symbolVariant(.fill)
-//                            .foregroundStyle(.yellow, .white)
-//                            // max Frame...
-//                            .frame(width: 90 ,height: 90)
-                        
-                        Text("Thua Thien Hue")
-                            .font(.system(size: 35))
-                            .foregroundColor(.white)
-                            .shadow(radius: 5)
+                        Image(systemName: "cloud.sun.rain").resizable()
+                            .symbolVariant(.fill)
+                            .foregroundStyle(.yellow, .white)
+                            // max Frame...
+                            .frame(width: 60 ,height: 60)
                         
                         Text(" 32˚C")
-                            .font(.system(size: 45))
+                            .font(.system(size: 25))
                             .foregroundColor(.white)
                             .shadow(radius: 5)
                             .opacity(getTitleOpacity())
+                        
+                        Text("Thua Thien Hue")
+                            .font(.system(size: 25))
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                         
                         Text("Cloudy˚")
                             .foregroundStyle(.secondary)
@@ -75,7 +75,7 @@ struct Home: View {
                     .offset(y: getTitleOffset())
                     
                     //Custom Data View...
-                    VStack(spacing: 20){
+                    VStack(spacing: 10){
                         
                         //Customer Stack...
 
