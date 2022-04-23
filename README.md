@@ -1,5 +1,3 @@
-# WeatherApp
+# ☔︎ WeatherApp
+![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/66858640/164888950-a33e3819-0861-4402-affc-e1af6b990ed2.gif)
 
-## Note: 
-App đang xây dựng giao diện bằng SwiftUI.
-Chạy thử trên nền tảng iOS 15 và bản Xcode 13.
